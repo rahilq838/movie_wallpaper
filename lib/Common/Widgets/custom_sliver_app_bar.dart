@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-
-import '../theme_colors.dart';
+import 'package:movie_wallpaper/Common/functions.dart';
+import 'package:movie_wallpaper/Common/theme_colors.dart';
 
 class TopSliverAppBar extends StatelessWidget {
   final String text;
@@ -17,11 +17,12 @@ class TopSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      backgroundColor: foregroundClr,
       floating: true,
       centerTitle: true,
       title: Text(
         text,
-        style: const TextStyle(color: txtClr),
+        style: getHeaderTxtStyle(),
       ),
       elevation: 5,
       expandedHeight: mHeight * 0.08,

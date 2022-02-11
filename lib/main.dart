@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Common/theme_colors.dart';
 import 'Pages/home_page.dart';
 
 void main() {
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Movie Wallpaper',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: foregroundClr,
+        backgroundColor: backgroundClr,
       ),
       home: const MyHomePage(),
     );
