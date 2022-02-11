@@ -23,3 +23,14 @@ BoxDecoration getContainerBoxDecoration() => BoxDecoration(
       ],
       borderRadius: getAllBorderRadius(),
     );
+
+
+SnackBar snackBarWidget({text}) {
+  return SnackBar(
+    content: Text(text ?? "Error"),
+    duration: const Duration(seconds: 3),
+    // shape: ,
+  );
+}
+
+

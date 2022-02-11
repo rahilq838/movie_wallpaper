@@ -5,6 +5,7 @@ import 'package:movie_wallpaper/Common/Widgets/custom_sliver_app_bar.dart';
 import 'package:movie_wallpaper/Common/theme_colors.dart';
 
 import '../Common/functions.dart';
+import '../Services/movie_wallpapers.dart';
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -17,7 +18,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late double height,width;
-
+  MovieWallpapersService movieWallpapers = MovieWallpapersService();
   List<Widget> images = [];
 
 
@@ -52,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
     //   _buildImageWidget('assets/hp.jpg')
     ];
     super.initState();
+    movieWallpapers.getAllMovies();
   }
 
   @override
