@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Common/theme_colors.dart';
 import 'Pages/home_page.dart';
 
 void main() {
@@ -12,13 +13,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Movie Wallpaper',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
