@@ -9,6 +9,9 @@ TextStyle getHeaderTxtStyle() =>
 
 EdgeInsets getAllPadding(double height) => EdgeInsets.all(height * 0.01);
 
+EdgeInsets getLeftRightPadding(double height) =>
+    EdgeInsets.only(left: height * 0.01, right: height * 0.01);
+
 BorderRadius getAllBorderRadius() =>
     const BorderRadius.all(Radius.circular(10));
 
@@ -18,12 +21,11 @@ BoxDecoration getContainerBoxDecoration() => BoxDecoration(
           color: Colors.black,
           offset: Offset(2, 2),
           spreadRadius: 2,
-          blurRadius: 5,
+          // blurRadius: 2,
         ),
       ],
       borderRadius: getAllBorderRadius(),
     );
-
 
 SnackBar snackBarWidget({text}) {
   return SnackBar(
@@ -32,5 +34,3 @@ SnackBar snackBarWidget({text}) {
     // shape: ,
   );
 }
-
-
