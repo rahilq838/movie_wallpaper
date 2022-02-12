@@ -19,8 +19,6 @@ class SetWallBottomOptions extends StatefulWidget {
 class _SetWallBottomOptionsState extends State<SetWallBottomOptions> {
   late double height, width;
 
-
-
   Future onSetWall(int location) async{
     String url = widget.movieWallpaper.src;
     var file = await DefaultCacheManager().getSingleFile(url);
